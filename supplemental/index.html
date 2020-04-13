@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SpeedNet: Learning the Speediness in Videos</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container">
+  <h1 align="center">SpeedNet: Learning the Speediness in Videos </h1>
+  <h2 align="center">Supplementary Material</h2>
+  <p>&nbsp;</p>
+  <ul>
+    <li><a href="#adaptive_speedup">Adaptive Speedup Results (Section 5.3)</a></li>
+    <li><a href="#video_retrieval">Video Retrieval Results (Section 5.4.2)</a></li>
+    <li><a href="#visualization">Visualization of Salient Space-time Regions (Section 5.5 and Figure 8)</a></li>
+    <li><a href="#spatially_varying">Spatially-varying Speediness  (Section 5.5 and Figure 9)</a></li>
+    <li><a href="#video_predictions">Additional SpeedNet Prediction Results (Section 5.1.1)</a></li>
+    <li><a href="#speediness_predictions">Predicting Normal Speed and Slow Motion Segments (Section 5.2 and Figure 1)</a></li>
+    <li><a href="#motion_magnitude">Speedup is not Motion Magnitude (Section 5.1.2 and Figure 2) </a></li>
+  </ul>
+  <p>&nbsp;</p>
+  <hr />
+  <h2 align="left"><a name="adaptive_speedup" id="adaptive_speedup"></a>Adaptive Speedup Results</h2>
+  <p align="left">For each video, we compare constant (uniform) 2x speedup (left) with our adaptive speedup result (right) as detailed in Section 5.3.<br />
+    These are the same 5 pairs of videos shown in our user study (Section 5.3, Figure 6).<br />
+    Below each sped-up video we show its corresponding speedup curve.<br />
+    For the video on the right, the plot shows the adaptive speedup score over time as explained in section 4.2.<br />
+    Note that each pair of constant and adaptive sped-up videos have the exact same duration (length).</p>
+  <p align="left">&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr align="center">
+        <td colspan="2" align="center"><h3>&quot;100m&quot;</h3>
+          (<a href="adaptive_speedup/100m-orig.mp4">original video</a>)</td>
+      </tr>
+      <tr>
+        <td align="center"><video width="400" controls="controls">
+            <source src="adaptive_speedup/100m-constant.mp4" type="video/mp4" />
+          </video></td>
+        <td align="center"><video width="400" controls="controls">
+            <source src="adaptive_speedup/100m-adaptive.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+      <tr>
+        <td align="center">Constant speedup</td>
+        <td align="center">Adaptive speedup (our result)</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr align="center">
+        <td colspan="2" align="center"><h3>&quot;Pool&quot;</h3>
+          (<a href="adaptive_speedup/pool-orig.mp4">original video</a>)</td>
+      </tr>
+      <tr>
+        <td align="center"><video width="400" controls>
+            <source src="adaptive_speedup/pool-constant.mp4" type="video/mp4">
+          </video></td>
+        <td align="center"><video width="400" controls="controls">
+            <source src="adaptive_speedup/pool-adaptive.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+      <tr>
+        <td align="center">Constant speedup</td>
+        <td align="center">Adaptive speedup (our result)</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr align="center">
+        <td colspan="2" align="center"><h3>&quot;High Jump&quot;</h3>
+          (<a href="adaptive_speedup/high_jump-orig.mp4">original video</a>)</td>
+      </tr>
+      <tr>
+        <td align="center"><video width="400" controls="controls">
+            <source src="adaptive_speedup/high_jump-constant.mp4" type="video/mp4" />
+          </video></td>
+        <td align="center"><video width="400" controls="controls">
+            <source src="adaptive_speedup/high_jump-adaptive.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+      <tr>
+        <td align="center">Constant speedup</td>
+        <td align="center">Adaptive speedup (our result)</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr align="center">
+        <td colspan="2" align="center"><h3>&quot;Dancing&quot;</h3>
+          (<a href="adaptive_speedup/dancing-orig.mp4">original video</a>)</td>
+      </tr>
+      <tr>
+        <td align="center"><video width="400" controls="controls">
+            <source src="adaptive_speedup/dancing-constant.mp4" type="video/mp4" />
+          </video></td>
+        <td align="center"><video width="400" controls="controls">
+            <source src="adaptive_speedup/dancing-adaptive.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+      <tr>
+        <td align="center">Constant speedup</td>
+        <td align="center">Adaptive speedup (our result)</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr align="center">
+        <td colspan="2" align="center"><h3>&quot;Floor is Lava&quot;</h3>
+          (<a href="adaptive_speedup/floor_is_lava-orig.mp4">original video</a>)</td>
+      </tr>
+      <tr>
+        <td align="center"><video width="400" controls="controls">
+            <source src="adaptive_speedup/floor_is_lava-constant.mp4" type="video/mp4" />
+          </video></td>
+        <td align="center"><video width="400" controls="controls">
+            <source src="adaptive_speedup/floor_is_lava-adaptive.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+      <tr>
+        <td align="center">Constant speedup</td>
+        <td align="center">Adaptive speedup (our result)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p align="left">&nbsp;</p>
+  <p align="left">&nbsp;</p>
+  <hr />
+  <h2 align="left"><a name="video_retrieval" id="video_retrieval"></a>Video Retrieval Results</h2>
+  <p align="left">The left column shows a query clip, and the right three columns show the clips with the closest embeddings, from left (closest) to right (3rd-closest).<br />
+    In the top row, the retrieval is done from clips taken from further along in the same video.<br />
+    In the subsequent rows, the results are retrieved from a database of video clips spanning the entire UCF101 training set.<br />
+    Note that the embeddings focus more on the type of movement than the action class. For example, the girl in the second row (rightmost column) is making similar back/forth/up/down motions with her hand as the hand drummer in the query clip.</p>
+  <p align="left">Additional video retrieval results from a diverse set of queries can be found <b><a href="retrieval/index.html">here</a></b>.<p align="left">&nbsp;</p>
+  <table border="0" align="center">
+    <tbody>
+      <tr align="center">
+        <td><strong>Query clip</strong></td>
+        <td width="12">&nbsp;</td>
+        <td colspan="3"><strong>Retrieved top-3 results within a video</strong></td>
+      </tr>
+      <tr>
+        <td><img src="retrieval/shots/q_shot.gif" width="200" /></td>
+        <td>&nbsp;</td>
+        <td><img src="retrieval/shots/nn1_shot.gif" width="200" /></td>
+        <td><img src="retrieval/shots/nn2_shot.gif" width="200" /></td>
+        <td><img src="retrieval/shots/nn3_shot.gif" width="200" /></td>
+      </tr>
+      <tr align="center">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+      <tr align="center">
+        <td><strong>Query clip</strong></td>
+        <td width="12">&nbsp;</td>
+        <td colspan="3"><strong>Retrieved top-3 results across videos (UCF101)</strong></td>
+      </tr>
+      <tr>
+        <td><img src="retrieval/paper1/q1.gif" width="200" /></td>
+        <td>&nbsp;</td>
+        <td><img src="retrieval/paper1/q1nn1.gif" width="200" /></td>
+        <td><img src="retrieval/paper1/q1nn2.gif" width="200" /></td>
+        <td><img src="retrieval/paper1/q1nn3.gif" width="200" /></td>
+      </tr>
+      <tr>
+        <td><img src="retrieval/2627/q_frames.gif" width="200" /></td>
+        <td>&nbsp;</td>
+        <td><img src="retrieval/2627/nn0_frames.gif" width="200" /></td>
+        <td><img src="retrieval/2627/nn1_frames.gif" width="200" /></td>
+        <td><img src="retrieval/2627/nn2_frames.gif" width="200" /></td>
+      </tr>
+      <tr>
+        <td><img src="retrieval/2633/q_frames.gif" width="200" /></td>
+        <td>&nbsp;</td>
+        <td><img src="retrieval/2633/nn0_frames.gif" width="200" /></td>
+        <td><img src="retrieval/2633/nn1_frames.gif" width="200" /></td>
+        <td><img src="retrieval/2633/nn2_frames.gif" width="200" /></td>
+      </tr>
+      <tr>
+        <td><img src="retrieval/2841/q_frames.gif" width="200" /></td>
+        <td>&nbsp;</td>
+        <td><img src="retrieval/2841/nn0_frames.gif" width="200" /></td>
+        <td><img src="retrieval/2841/nn1_frames.gif" width="200" /></td>
+        <td><img src="retrieval/2841/nn2_frames.gif" width="200" /></td>
+      </tr>
+      <tr>
+        <td><img src="retrieval/942/q_frames.gif" width="200" /></td>
+        <td>&nbsp;</td>
+        <td><img src="retrieval/942/nn0_frames.gif" width="200" /></td>
+        <td><img src="retrieval/942/nn1_frames.gif" width="200" /></td>
+        <td><img src="retrieval/942/nn2_frames.gif" width="200" /></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <p align="left">&nbsp;</p>
+  <hr />
+  <h2 align="left"><a name="visualization" id="visualization"></a>Visualization of Salient Space-time Regions</h2>
+  <p align="left">Which space-time regions  contribute  the  most to our speediness predictions? The following are CAM visualizations as detailed in Sec. 5.5 for  a video of a gymnast, parkour and rock climbing.</p>
+  <p align="left">&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr align="center">
+        <td colspan="2"><table width="200" border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center"><video width="250" controls>
+                    <source src="visualizations/spatial/gymnast.mp4" type="video/mp4" />
+                  </video></td>
+                <td align="center"><video width="250" controls>
+                    <source src="visualizations/spatial/parkour.mp4" type="video/mp4" />
+                  </video></td>
+                <td align="center"><video width="250" controls>
+                    <source src="visualizations/spatial/rock_climbing.mp4" type="video/mp4" />
+                  </video></td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+    </tbody>
+  </table>
+  <p align="left">&nbsp;</p>
+  <p align="left">&nbsp;</p>
+  <hr />
+  <h2 align="left"><a name="spatially_varying" id="spatially_varying"></a>Spatially-varying speediness</h2>
+  <p align="left">Space-time visualizations for video segments from <a href="https://vimeo.com/29213923">&quot;Memory Eleven&quot;</a>, where one part of the frame is played in slow motion while the rest of the frame is played at normal speed. Left column: the input video clips. Right column: our predicted speediness, from blue (normal speed), to red (slow motion). See Section 5.5 in the paper for details on how the visualizations are computed.</p>
+  <p align="left">&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><strong>Input video</strong></td>
+        <td align="center"><strong>Visualization of predicted speediness</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><video width="250" controls>
+            <source src="visualizations/memory_eleven/orig_1.mp4" type="video/mp4">
+          </video></td>
+        <td align="center"><video width="250" controls>
+            <source src="visualizations/memory_eleven/vid_1.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+      <tr>
+        <td align="center"><video width="250" controls>
+            <source src="visualizations/memory_eleven/orig_2.mp4" type="video/mp4" />
+          </video></td>
+        <td align="center"><video width="250" controls>
+            <source src="visualizations/memory_eleven/vid_2.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+      <tr>
+        <td align="center"><video width="250" controls>
+            <source src="visualizations/memory_eleven/orig_3.mp4" type="video/mp4" />
+          </video></td>
+        <td align="center"><video width="250" controls>
+            <source src="visualizations/memory_eleven/vid_3.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p align="left">&nbsp;</p>
+  <p align="left">&nbsp;</p>
+  <hr />
+  <h2 align="left"><a name="video_predictions" id="video_predictions"></a>Additional SpeedNet Prediction Results</h2>
+  <p align="left">SpeedNet prediction probabilites on videos played at 1x and 2x speed (supplements Figure 4 in the paper). 
+    The probabilites for normal speed (1x) are shown in blue and for sped up (2x) in red.
+    On the y axis, the probability ragnes from 0 (normal speed) to 1 (sped up).</p>
+  <p align="left">&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="2" align="center"><h3>&quot;Gymnast&quot;</h3></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><img src="predictions/gymnast.jpg" width="950" alt=""/></td>
+      </tr>
+      <tr>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center">SpeedNet score for 1x video</td>
+        <td align="center">SpeedNet score for 2x video</td>
+      </tr>
+      <tr>
+        <td align="center"><video width="400" controls="controls">
+            <source src="predictions/gymnast-1x-speediness.mp4" type="video/mp4" />
+          </video></td>
+        <td align="center"><video width="400" controls="controls">
+            <source src="predictions/gymnast-2x-speediness.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="2" align="center"><h3>&quot;Rock Climbing&quot;</h3></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><img src="predictions/rock_climbing.jpg" width="950" alt=""/></td>
+      </tr>
+      <tr>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center">SpeedNet score for 1x video</td>
+        <td align="center">SpeedNet score for 2x video</td>
+      </tr>
+      <tr>
+        <td align="center"><video width="400" controls="controls">
+            <source src="predictions/rock_climbing-1x-speediness.mp4" type="video/mp4" />
+          </video></td>
+        <td align="center"><video width="400" controls="controls">
+            <source src="predictions/rock_climbing-2x-speediness.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p align="left">&nbsp;</p>
+  <p align="left">&nbsp;</p>
+  <hr />
+  <h2 align="left"><a name="speediness_predictions" id="speediness_predictions"></a>Predicting Normal Speed and Slow Motion Segments</h2>
+  <p align="left">In the following videos, parts of the video are played at normal speed and parts are in slow motion.
+    Our model accurately predicts the parts played at normal speed and the parts that are slowed down. See further details in Section 5.2 in the paper and the <a href="SpeedNet_supplemental_doc.pdf">supplemental document</a>.</p>
+  <p align="left">&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h3>&quot;Dancer&quot;</h3></td>
+      </tr>
+      <tr>
+        <td align="center"><video width="500" controls>
+            <source src="predictions/dance-speediness.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h3>&quot;Tap&quot;</h3></td>
+      </tr>
+      <tr>
+        <td align="center"><video width="500" controls="controls">
+            <source src="predictions/tap-speediness.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <p align="left">&nbsp;</p>
+  <hr />
+  <h2 align="left"><a name="motion_magnitude" id="motion_magnitude"> </a>Speediness vs. Motion Magnitude</h2>
+  <p align="left">Supplementing Figure 2 in the paper. We consider a video of a person walking at normal speed close and far from the camera. The SpeedNet predcitions (probability of the video playing at normal speed) are shown
+    alongside the magnitude of motions in the video (mean magnitude of optical flow vectors per frame, over time). While motion magnitude varies significantly between a person walking close or far from the camera, our model correctly classifies all such regions as normal speed for a video played at 1x, and as sped up for a video played at 2x.</p>
+  <p align="left">&nbsp;</p>
+  <table width="1003" border="0" align="center">
+    <tbody>
+      <tr>
+        <td width="84" align="center" valign="middle">&nbsp;</td>
+        <td width="1" align="center" valign="middle">&nbsp;</td>
+        <td width="450" align="center" valign="middle"><h3>Speediness</h3></td>
+        <td width="450" align="center" valign="middle"><h3>Motion magnitude</h3></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle"><h3>From<br />
+            1x video</h3></td>
+        <td align="center" valign="middle">&nbsp;</td>
+        <td align="center" valign="middle"><video width="450" controls="controls">
+            <source src="motion_magnitude/walking-1x-speednet.mp4" type="video/mp4" />
+          </video></td>
+        <td align="center" valign="middle"><video width="450" controls="controls">
+            <source src="motion_magnitude/walking-1x-motion.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle"><h3>From<br />
+            2x video</h3></td>
+        <td align="center" valign="middle">&nbsp;</td>
+        <td align="center" valign="middle"><video width="450" controls="controls">
+            <source src="motion_magnitude/walking-2x-speednet.mp4" type="video/mp4" />
+          </video></td>
+        <td align="center" valign="middle"><video width="450" controls="controls">
+            <source src="motion_magnitude/walking-2x-motion.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p align="left">&nbsp;</p>
+</div>
+</body>
+</html>
