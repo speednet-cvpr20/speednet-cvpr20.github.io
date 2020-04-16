@@ -47,7 +47,7 @@ SpeedNet: Learning the Speediness in Videos
   <br />
   <table width="200" border="0" align="center">
     <tr>
-      <td><img src="images/teaser.png" width="950" alt=""/></td>
+      <td><img src="images/teaser.png" width="900" alt=""/></td>
     </tr>
     <tr>
       <td class="caption"><p>Given an input video, our method automatically predicts the "speediness" of objects in the video-—whether they move faster, at, or slower than their natural speed. Bottom: a video of a dancer alternates between normal speed and slow motion play-back, as correctly captured by our speediness prediction over time. The core component of our method is SpeedNet (top)-—a novel deep network that can detect whether an object is moving at, or faster than, its normal speed.</p></td>
@@ -59,6 +59,27 @@ SpeedNet: Learning the Speediness in Videos
 The core component in our approach is SpeedNet---a novel deep network trained to detect if a video is playing at normal rate, or if it is sped up. SpeedNet is trained on a large corpus of natural videos in a self-supervised manner, without requiring any manual annotations. We show how this single, binary classification network can be used to detect arbitrary rates of speediness of objects.
 We demonstrate prediction results by SpeedNet on a wide range of videos containing complex natural motions, and examine the visual cues it utilizes for making those predictions. Importantly, we show that through predicting the speed of videos, the model learns a powerful and meaningful space-time representation that goes beyond simple motion cues. We demonstrate how those learned features can boost the performance of self-supervised action recognition, and can be used for video retrieval. Furthermore, we also apply SpeedNet for generating time-varying, adaptive video speedups, which can allow viewers to watch videos faster, but with less of the jittery, unnatural motions typical to videos that are sped up uniformly.<br />
   </p>
+  <p class="section">&nbsp;</p>
+  
+  <p><span class="section">Adaptive video speedup</span></p>
+  <table width="200" border="0" align="center">
+        <tr>
+          <td align="center"><video width="400" controls="controls">
+              <source src="supplemental/adaptive_speedup/dancing-constant.mp4" type="video/mp4" />
+            </video></td>
+          <td align="center"><video width="400" controls="controls">
+              <source src="supplemental/adaptive_speedup/dancing-adaptive.mp4" type="video/mp4" />
+            </video></td>
+        </tr>
+        <tr>
+          <td align="center">Constant speedup</td>
+          <td align="center">Adaptive speedup (our result)</td>
+        </tr>
+        <tr>
+		  <td colspan="2" class="caption"></br>We apply the SpeedNet model for generating time-varying, adaptive speedup videos, based on the frames’ speediness. </br>The idea is: we speed up a video. As long as the network thinks that a segment in the resulting video is not sped-up, we can keep on speeding up that video segment even further. Please find more examples <a href="supplemental/index.html">here</a></td>
+		</tr>
+     </table>
+  
   <p class="section">&nbsp;</p>
 
   <p class="section">Paper</p>
